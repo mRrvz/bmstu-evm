@@ -1,11 +1,8 @@
-const Router = require("express").Router;
-
+const router = require("express").Router();
 const controllers = require("./controllers");
 
-const router = Router();
-
 router.post("/max3", controllers.max3)
+router.post("/index", controllers.get_by_index)
 
 module.exports = router;
 
-//const router = Router();

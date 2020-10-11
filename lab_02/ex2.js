@@ -1,3 +1,5 @@
+"use strict";
+
 class Triangle {
     constructor(a, b, c) {
         this.set(a, b, c);

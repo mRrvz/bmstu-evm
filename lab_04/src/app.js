@@ -19,8 +19,6 @@ app.use("/tasks", router);
 app.use("/", (req, res) => {
     if ("GET" === req.method) {
         res.sendFile(index_page);
-    } else {
-        post(req, res);
     }
 });
 

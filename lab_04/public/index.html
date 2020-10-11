@@ -1,29 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NodeLab04</title>
-</head>
-<style>
-    form,h1{background-color:white;
-      color:#42A4D3;
-      padding:15px}
-</style>
-<body style="background-image:url(bg.jpg)">
-    <h1>TASK1: MAX3 function</h1>
-    <form method="POST" action="/tasks/max3">
-        <label for="a">Enter first number:</label>
-        <input type="text" name="fst">
-        <br>
-        <label for="b">Enter second number:</label>
-        <input type="text" name="snd">
-        <br>
-        <label for="c">Enter third number:</label>
-        <input type="text" name="thd">
-        <br>
-        <input type="submit", value="взломать">
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NodeLab04</title>
+    </head>
+    <style>
 
-</body>
+        form,h1{background-color:white;
+                color:#42A4D3;
+                padding:15px}
+        form{margin-bottom:100px}
+
+    </style>
+    <!--<body style="background-image:url(bg.jpg)">-->
+    <body>
+    <div style="display: flex">
+        <div>
+            <img src="bg.jpg" alt="bg">
+            <h1>TASK1: MAX3 FUNCTION</h1>
+            <form method="POST" action="/tasks/max3">
+                <label for="a">Введите первое число:</label>
+                <input type="text" name="fst">
+                <br>
+                <label for="b">Введите второе число:</label>
+                <input type="text" name="snd">
+                <br>
+                <label for="c">Введите третье число:</label>
+                <input type="text" name="thd">
+                <br>
+                <input type="submit", value="В3JIOMATb", style="font-weight: bold; background-color:black; color:white; padding: 10px">
+            </form>
+        </div>
+        <img src="bg.jpg" alt="bg">
+    </div>
+
+
+        <h1>TASK2: GET ELEMENT BY INDEX</h1>
+        <form method="POST" action="/tasks/index">
+            <label for="index">Введите индекс массива:</label>
+            <input type="text" name="index">
+            <br>
+            <input type="submit", value="В3JIOMATb", style="font-weight: bold; background-color:black; color:white; padding: 10px">
+        </form>
+
+
+        <h1>TASK3: FORM GENERATING.</h1>
+        <form method="POST" action="/tasks/formgen">
+            <label for="fields">Введите поля:</label>
+            <input type="text" name="fields">
+            <br>
+            <label for="address">Введите URL:</label>
+            <input type="text" name="address">
+            <br>
+            <input type="submit", value="В3JIOMATb", style="font-weight: bold; background-color:black; color:white; padding: 10px">
+        </form>
+
+        <h1>Task 4. Find all numbers from A to B whose mod(C) = 0.</h1>
+        <form method="POST" action="/task/findall">
+            <label for="A">Enter A:</label>
+            <input type="text" name="a">
+            <br>
+            <label for="B">Enter B:</label>
+            <input type="text" name="b">
+            <br>
+            <label for="C">Enter C:</label>
+            <input type="text" name="c">
+            <br>
+            <input type="submit">
+        </form>
+
+
+
+    </body>
 </html>

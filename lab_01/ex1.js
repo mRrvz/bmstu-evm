@@ -15,7 +15,7 @@ class childrenStorage {
     }
 
     read(surname) {
-        return this.storage.find(child => child.surname == surname);
+        return this.storage.find(child => child.surname === surname);
     }
 
     create(surname, age) {
@@ -30,6 +30,10 @@ class childrenStorage {
         let child = this.read(surname);
         if (!child) {
             throw "Child doesn't exists."
+        }
+
+        if (this.read(new_surname)) {
+            throw "Child with this surname exists."
         }
 
         child.surname = new_surname;
@@ -61,7 +65,7 @@ class childrenStorage {
     }
 
     fst_symbol(symbol) {
-        return this.storage.filter(child => child.surname[0] == symbol);
+        return this.storage.filter(child => child.surname[0] === symbol);
     }
 
     surname_longer_than(size) {
@@ -69,7 +73,7 @@ class childrenStorage {
     }
 
     vowel_fst() {
-        return this.storage.filter(child => VOWELS.find(symb => symb == child.surname[0]))
+        return this.storage.filter(child => VOWELS.find(symb => symb === child.surname[0]))
     }
 }
 

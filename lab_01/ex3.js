@@ -1,3 +1,5 @@
+"use strict";
+
 class Point {
     constructor(name, x, y) {
         this.name = name;
@@ -12,7 +14,7 @@ class pointStorage {
     }
 
     read(name) {
-        return this.storage.find(point => point.name == name);
+        return this.storage.find(point => point.name === name);
     }
 
     create(name, x, y) {

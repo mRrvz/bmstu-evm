@@ -14,7 +14,7 @@ class studentsStorage {
     }
 
     read(id) {
-        return this.storage.find(student => student.id == id);
+        return this.storage.find(student => student.id === id);
     }
 
     create(id, group, rating_list) {
@@ -31,6 +31,10 @@ class studentsStorage {
             throw "Student doesn't exists."
         }
 
+        if (this.read(new_id)) {
+            return false;
+        }
+
         student.id = new_id;
         student.group = new_group;
         student.rating_list = new_rating_list;
@@ -45,7 +49,11 @@ class studentsStorage {
     }
 
     avg_rating(id) {
-        const student = this.storage.find(student => student.id == id);
+        const student = this.storage.find(student => student.id === id);
+        if (!student) {
+            throw "This student doesn't exists."
+        }
+
         if (!student.rating_list.length) {
             throw "This student has no rating."
         }
@@ -54,7 +62,7 @@ class studentsStorage {
     }
 
     group_info(group) {
-        return this.storage.filter(student => student.group == group);
+        return this.storage.filter(student => student.group === group);
     }
 
     max_marks() {

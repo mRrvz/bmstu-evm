@@ -1,3 +1,5 @@
+"use strict";
+
 let exec = function(cnt, delay) {
     console.log(++cnt);
 

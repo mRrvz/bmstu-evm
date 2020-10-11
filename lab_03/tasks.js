@@ -7,18 +7,22 @@ const fs = require("fs");
 const VOWELS = ['A', 'E', 'I', 'O', 'U', 'Y'];
 
 function task1() {
+    console.log("===== TASK1 =====");
+
     const fname = path.join(__dirname, "task1.txt")
     const n = readline.questionInt("Enter N: ");
 
     let storage = Array.from(Array(n).keys()).reduce((acc, i) => {
-         const str = readline.question(`Enter string №${i + 1}: `);
-         return str.length % 2 == 0 ? acc.concat([str]) : acc;
+        const str = readline.question(`Enter string №${i + 1}: `);
+        return str.length % 2 == 0 ? acc.concat([str]) : acc;
     }, []);
 
     fs.writeFileSync(fname, JSON.stringify(storage, null, 4));
 }
 
 function task2() {
+    console.log("===== TASK2 =====");
+
     const fname = path.join(__dirname, "task1.txt")
     const strings = JSON.parse(fs.readFileSync(fname)).filter(str =>
         !str.toUpperCase().split("").reduce((acc, char) =>
@@ -29,15 +33,17 @@ function task2() {
 }
 
 function task3() {
+    console.log("===== TASK3 =====");
+
     const extension = readline.question("Enter files extension: ");
     const dir = readline.question("Enter folder: ");
 
-    fs.readdirSync(folderpath).map(
+    fs.readdirSync(dir).map(
         filename => path.join(dir, filename)).map(
             file => { if (file.endsWith(extension)) {
                 console.log(`File: ${file}\nContents:\n${fs.readFileSync(file)}`);
-        }
-    })
+            }
+        })
 }
 
 function walk_and_find(fname, correct) {
@@ -49,6 +55,8 @@ function walk_and_find(fname, correct) {
 }
 
 function task4() {
+    console.log("===== TASK4 =====");
+
     const dir = readline.question("Enter path to folder: ");
     const names = [];
 
@@ -57,6 +65,8 @@ function task4() {
 }
 
 function task5() {
+    console.log("===== TASK5 =====");
+
     const n = readline.questionInt("Enter number of strings: ");
     const fname = path.join(__dirname, "task5.txt")
     const merged = Array.from(Array(n).keys()).reduce((acc, i) =>
@@ -65,12 +75,29 @@ function task5() {
     fs.writeFileSync(fname, merged);
 }
 
-function task6() {
+function recursive_walk_and_find(object, depth) {
+    let depth_max = depth;
 
+    if (typeof(object) === "object") {
+        depth_max = Object.keys(object).reduce((curr_depth, field) => 
+            Math.max(curr_depth, recursive_walk_and_find(object[field], depth + 1)), 0);
+    }
+
+    return depth_max;
+}
+
+function task6() {
+    console.log("===== TASK6 =====");
+
+    const content = fs.readFileSync(path.join(__dirname, "task6.txt"));
+    const object = JSON.parse(content);
+    const depth = recursive_walk_and_find(object, 0);
+
+    console.log(`Object:\n${JSON.stringify(object, null, 4)}\nDepth: ${depth}`);
 }
 
 function max_branch(obj, saver) {
-    if (!["array", "object"].includes(typeof(obj))) {
+    if (!("object" === typeof(obj))) {
         if (saver.current_depth > saver.max_depth) {
             saver.max_branch = saver.current_branch.filter(t => true);
             saver.current_depth = saver.max_depth;
@@ -89,6 +116,8 @@ function max_branch(obj, saver) {
 }
 
 function task7() {
+    console.log("===== TASK7 =====");
+
     const fname = readline.question("Enter filename: ");
     const obj = JSON.parse(fs.readFileSync(fname));
     const saver = {
@@ -110,6 +139,7 @@ function main() {
     //task3();
     //task4();
     //task5();
+    //task6();
     task7();
 }
 
