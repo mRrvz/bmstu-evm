@@ -43,7 +43,8 @@ function task3() {
             file => { if (file.endsWith(extension)) {
                 console.log(`File: ${file}\nContents:\n${fs.readFileSync(file)}`);
             }
-        })
+            }
+        )
 }
 
 function walk_and_find(fname, correct) {
@@ -86,14 +87,24 @@ function recursive_walk_and_find(object, depth) {
     return depth_max;
 }
 
+function max_deep(obj) {
+    obj.cnt++;
+    obj.acc = { acc: obj.acc };
+
+    try {
+        JSON.stringify(obj.acc)
+    } catch (_) {
+        console.log(obj.cnt)
+        return;
+    }
+
+    max_deep(obj);
+}
+
 function task6() {
     console.log("===== TASK6 =====");
 
-    const content = fs.readFileSync(path.join(__dirname, "task6.txt"));
-    const object = JSON.parse(content);
-    const depth = recursive_walk_and_find(object, 0);
-
-    console.log(`Object:\n${JSON.stringify(object, null, 4)}\nDepth: ${depth}`);
+    max_deep( { cnt: 0, acc: 1 } );
 }
 
 function max_branch(obj, saver) {
@@ -139,8 +150,8 @@ function main() {
     //task3();
     //task4();
     //task5();
-    //task6();
-    task7();
+    task6();
+    //task7();
 }
 
 main();
