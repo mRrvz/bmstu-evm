@@ -18,7 +18,7 @@
     <div style="display: flex">
         <div>
             <img src="bg.jpg" alt="bg">
-            <h1>TASK1: MAX3 FUNCTION</h1>
+            <h1>TASK1: Максимум из трёх.</h1>
             <form method="POST" action="/tasks/max3">
                 <label for="a">Введите первое число:</label>
                 <input type="text" name="fst">
@@ -36,7 +36,7 @@
     </div>
 
 
-        <h1>TASK2: GET ELEMENT BY INDEX</h1>
+        <h1>TASK2: Достать элемент из массива по индексу.</h1>
         <form method="POST" action="/tasks/index">
             <label for="index">Введите индекс массива:</label>
             <input type="text" name="index">
@@ -45,8 +45,8 @@
         </form>
 
 
-        <h1>TASK3: FORM GENERATING.</h1>
-        <form method="POST" action="/tasks/formgen">
+        <h1>TASK3: Генерация форм.</h1>
+        <form method="POST" action="/tasks/generate">
             <label for="fields">Введите поля:</label>
             <input type="text" name="fields">
             <br>
@@ -56,21 +56,18 @@
             <input type="submit", value="В3JIOMATb", style="font-weight: bold; background-color:black; color:white; padding: 10px">
         </form>
 
-        <h1>Task 4. Find all numbers from A to B whose mod(C) = 0.</h1>
-        <form method="POST" action="/task/findall">
-            <label for="A">Enter A:</label>
+        <h1>TASK 4: Все числа от A до B, которые делятся на C.</h1>
+        <form method="POST" action="/tasks/find_mod">
+            <label for="A">Введите A:</label>
             <input type="text" name="a">
             <br>
-            <label for="B">Enter B:</label>
+            <label for="B">Введите B:</label>
             <input type="text" name="b">
             <br>
-            <label for="C">Enter C:</label>
+            <label for="C">Введите C:</label>
             <input type="text" name="c">
             <br>
-            <input type="submit">
+            <input type="submit", value="В3JIOMATb", style="font-weight: bold; background-color:black; color:white; padding: 10px">
         </form>
-
-
-
     </body>
 </html>
