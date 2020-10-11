@@ -1,0 +1,89 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 2em !important;
+    margin: 0;
+    padding: 0;
+    background-color: #808080;
+    color: #808080 !important;
+}
+
+label {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+p {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    white-space: pre;
+}
+
+input {
+    justify-self: left;
+    width: 80%;
+    background-color: #000000;
+    color: #F0FFF0;
+    padding: 1em;
+    font-size: 1em;
+}
+
+div, input, button {
+    display: block;
+    margin: 0 auto;
+}
+
+div {
+    border-radius: 2em;
+    color: #F0FFF0;
+    background-color: #000000;
+    width: 60%;
+    padding: 2em;
+    border: 1px solid #F0FFF0;
+}
+
+p {
+    color: #808080;
+}
+
+button {
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 1em;
+    width: 60%;
+    color: #F0FFF0;
+    background: #000000;
+    border-radius: 2em;
+}
+
+h1 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    text-align: left;
+    margin-top: 1em;
+}
+
+a {
+    display: block;
+    width: 60%;
+    text-align: center;
+    text-decoration: none;
+    color: #F0FFF0;
+    font-size: 1.2em;
+    border-radius: 1em;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 0.4em;
+    background-color: #000000;
+    border: 1px solid #F0FFF0;
+}
