@@ -1,0 +1,30 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Создать машину</title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "ccar" }) %>
+
+    <% if (meta.log) { %>
+        <div class="log-card">
+            <h1><%=meta.log%></h1>
+        </div>
+    <% } %>
+    <% if (meta.error) { %>
+        <div class="err-card">
+            <h1><%=meta.error%></h1>
+        </div>
+    <% } %>
+
+    <div class="simple-card">
+        <h1>Зарегистрируй свою машину</h1>
+        <form method="POST" action="/create-car">
+            <input type="text" name="name" placeholder="Введите название машины">
+            <br>
+            <input type="number" name="price" placeholder="Введите цену машины">
+            <br>
+            <button type="submit">Создать</button>
+        </form>
+    </div>
+
+<%- include("includes/end.ejs") %>

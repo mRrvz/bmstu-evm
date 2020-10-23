@@ -1,0 +1,16 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Lab 07</title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "Home" }) %>
+
+    <div style="flex-direction: space-between; display: flex;" class="simple-card">
+
+        <a class="menu" href="/search-car">Найти машину</a>
+        <a class="menu" href="/search-stock">Найти склад</a>
+        <a class="menu" href="/create-car">Зарегистрировать машину</a>
+        <a class="menu" href="/create-stock">Зарегистрировать склад</a>
+    </div>
+
+<%- include("includes/end.ejs") %>

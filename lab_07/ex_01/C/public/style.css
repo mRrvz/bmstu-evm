@@ -42,6 +42,8 @@ input {
     border: 1px solid #FFFFFF;
     background-color: #111333;
     color: white;
+    width: 60%;
+    min-width: 100px;
 }
 
 button[type="submit"] {
@@ -52,6 +54,7 @@ button[type="submit"] {
     background-color: #111333;
     color: white;
     margin-left: 12px;
+    width: 150px;
 }
 
 button[type="submit"]:hover {
@@ -77,12 +80,13 @@ form {
     text-align: center;
 }
 
-.simple-card > form > * {
+form > * {
     margin-bottom: 10px;
 }
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 .bp {
@@ -110,6 +114,15 @@ h1 {
     padding: 1% 10%;
 }
 
+.log-card {
+    background-color: #00AA00;
+    border-radius: 1em;
+    margin: 50px 10%;
+    border: 2px solid #FFFFFF;
+    color: white;
+    padding: 1% 10%;
+}
+
 .exit-a {
     background-color: #AA0000;
     border-radius: 1em;
@@ -127,4 +140,33 @@ h1 {
 
 .active {
     color: orange;
+}
+
+.inv {
+    color: #111333;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 10px;
+}
+
+a.menu {
+    flex: 1;
+    margin: 10px 20px;
+    padding: 30px 0 0 0;
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #AAACCC;
+    margin: 0 auto;
+    display: block;
+    text-decoration: None;
+    color: #AAACCC;
+    font-size: 25px;
+}
+
+a.menu:hover {
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
 }

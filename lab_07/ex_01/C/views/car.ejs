@@ -1,0 +1,19 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Car <%= car.name %></title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "car" }) %>
+    <% if (error) { %>
+        <div class="err-card">
+            <h1><%=error%></h1>
+        </div>
+    <% } else { %>
+        <div class="simple-card">
+            <h1>Найти машину</h1>
+            <p class="bp">Название: <%=car.name%></p>
+            <p class="bp">Цена: <%=car.price%></p>
+        </div>
+    <% } %>
+
+<%- include("includes/end.ejs") %>

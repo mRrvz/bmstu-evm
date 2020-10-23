@@ -1,0 +1,16 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Поиск складов</title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "sinfo" }) %>
+    <div class="simple-card">
+        <h1>Поиск складов</h1>
+        <form method="GET" action="/stock">
+            <input type="text" name="name" placeholder="Введите название склада">
+            <br>
+            <button type="submit">Найти</button>
+        </form>
+    </div>
+
+<%- include("includes/end.ejs") %>

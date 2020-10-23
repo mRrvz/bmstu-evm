@@ -1,0 +1,30 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Создать склад</title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "cstock" }) %>
+
+    <% if (meta.log) { %>
+        <div class="log-card">
+            <h1><%=meta.log%></h1>
+        </div>
+    <% } %>
+    <% if (meta.error) { %>
+        <div class="err-card">
+            <h1><%=meta.error%></h1>
+        </div>
+    <% } %>
+
+    <div class="simple-card">
+        <h1>Зарегистрируй свой склад</h1>
+        <form method="POST" action="/create-stock">
+            <input type="text" name="name" placeholder="Введите название склада">
+            <br>
+            <input type="text" name="cars" placeholder="Введите название машин, через пробел">
+            <br>
+            <button type="submit">Создать</button>
+        </form>
+    </div>
+
+<%- include("includes/end.ejs") %>
