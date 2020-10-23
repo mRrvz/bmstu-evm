@@ -1,0 +1,130 @@
+html {
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FF0000;
+}
+
+header {
+    background-color: #7ac2d6;
+    border-radius: 0 0 1em 1em;
+    border: 2px solid #FFFFFF;
+    border-top: None;
+    color: white;
+    padding: 1% 10%;
+}
+
+nav {
+    display: flex;
+    flex-direction: space-between;
+    text-align: center;
+}
+
+nav > a {
+    flex: 1;
+    display: block;
+    color: white;
+    text-decoration: None;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+
+input {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    background-color: #111333;
+    color: white;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    background-color: #111333;
+    color: white;
+    margin-left: 12px;
+}
+
+button[type="submit"]:hover {
+    border-radius: 5px;
+    border: 1px solid #00CC00;
+    background-color: #00CC00;
+}
+
+::placeholder {
+    color: #AAACCC;
+}
+
+.simple-card {
+    background-color: #7ac2d6;
+    border-radius: 1em;
+    margin: 50px 10%;
+    border: 2px solid #FFFFFF;
+    color: white;
+    padding: 10%;
+}
+
+form {
+    text-align: center;
+}
+
+.simple-card > form > * {
+    margin-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bp {
+    font-size: 25px;
+}
+
+.ba {
+    display: block;
+    text-align: center;
+    text-decoration: None;
+    color: #AAACCC;
+    font-size: 25px;
+}
+
+.ba:hover {
+    color: #00CC00;
+}
+
+.err-card {
+    background-color: #AA0000;
+    border-radius: 1em;
+    margin: 50px 10%;
+    border: 2px solid #FFFFFF;
+    color: white;
+    padding: 1% 10%;
+}
+
+.exit-a {
+    background-color: #AA0000;
+    border-radius: 1em;
+    display: inline-block;
+    margin: 0 10%;
+    border: 2px solid #FFFFFF;
+    color: white;
+    padding: 1% 10%;
+}
+
+.exit-a:hover {
+    background-color: #BB0000;
+    color: white;
+}
+
+.active {
+    color: orange;
+}

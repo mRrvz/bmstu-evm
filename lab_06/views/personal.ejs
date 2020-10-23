@@ -1,0 +1,42 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Персональная страница</title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "personal" }) %>
+    <% if (error) {%>
+        <div class="err-card">
+            <h1><%=error%></h1>
+        </div>
+    <%}%>
+
+    <% if (isAuth) {%>
+        <div class="simple-card">
+            <h1>Пользователь</h1>
+            <p class="bp">Логин: <%= user.login %></p>
+            <p class="bp">Пароль: <%= user.password %></p>
+            <p class="bp">Хобби: <%= user.hobby %></p>
+            <p class="bp">Возраст: <%= user.age %></p>
+        </div>
+
+        <a class="ba exit-a" href="/exit">Выход</a>
+
+    <%} else {%>
+
+        <div class="simple-card">
+            <form METHOD="POST" action="/login">
+                <label for="login"></label>
+                <input type="text" name="login" spellcheck="false" autocomplete="off">
+                <br>
+
+                <label for="password"></label>
+                <input type="password" name="password" spellcheck="false" autocomplete="off">
+                <br>
+
+                <button type="submit">Логин</button>
+            </form>
+        </div>
+
+    <%}%>
+
+<%- include("includes/end.ejs") %>

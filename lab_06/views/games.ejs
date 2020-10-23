@@ -1,0 +1,22 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Игры</title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "games" }) %>
+
+    <% if (error) {%>
+        <div class="err-card">
+            <h1><%=error%></h1>
+        </div>
+    <% } %>
+
+    <% for (const game of games) { %>
+        <div class="simple-card">
+            <h1 style="text-align: center"><%= game.name %></h1>
+            <p class="bp">Описание: <%= game.description %></p>
+            <p class="bp">Возраст: <%= game.age %></p>
+        </div>
+    <% } %>
+
+<%- include("includes/end.ejs") %>

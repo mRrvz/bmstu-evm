@@ -1,0 +1,20 @@
+<%- include("includes/header.ejs") %>
+    <link rel="stylesheet" href="/style.css">
+    <title>Lab 06</title>
+</head>
+<body>
+    <%- include("includes/navbar.ejs", { page: "Home" }) %>
+    <div class="simple-card">
+        <h1>Игры</h1>
+        <form method="GET" action="/games">
+            <label for="age"></label>
+            <input type="text" name="age" placeholder="Введите возраст">
+            <button type="submit">Проверить</button>
+        </form>
+    </div>
+    <div class="simple-card">
+        <h1>Персональная страница</h1>
+        <a class="ba" href="/personal">Ссылка на персональную страницу</a>
+    </div>
+
+<%- include("includes/end.ejs") %>
