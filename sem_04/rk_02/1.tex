@@ -1,0 +1,187 @@
+% !TeX document-id = {c68f4be8-c497-43e0-82df-e9ebfbea9577}
+% !TeX TXS-program:pdflatex = pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex
+% новая команда \RNumb для вывода римских цифр
+\documentclass[a4paper,12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm} 
+\usepackage{caption}
+\usepackage{misccorr}
+\usepackage[noadjust]{cite}
+\usepackage{cmap} 
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{verbatim}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{esint}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{color}
+\usepackage[most]{tcolorbox} 
+\usepackage{diagbox}
+
+\lstset{basicstyle=\fontsize{10}{10}\selectfont,breaklines=true}
+
+\newcommand{\specchapter}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\specsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\specsubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+\newcommand{\RNumb}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\newcommand{\jj}{\righthyphenmin=20 \justifying}
+
+
+% геометрия
+\geometry{pdftex, left = 2cm, right = 2cm, top = 2.5cm, bottom = 2.5cm}
+
+\setcounter{tocdepth}{4} % фикс переноса 
+\righthyphenmin = 2
+\tolerance = 2048
+
+\begin{document}
+\thispagestyle{empty}
+
+\noindent \begin{minipage}{0.15\textwidth}
+	\includegraphics[width=\linewidth]{b_logo}
+\end{minipage}
+\noindent\begin{minipage}{0.9\textwidth}\centering
+	\textbf{Министерство науки и высшего образования Российской Федерации}\\
+	\textbf{Федеральное государственное бюджетное образовательное учреждение высшего образования}\\
+	\textbf{«Московский государственный технический университет имени Н.Э.~Баумана}\\
+	\textbf{(национальный исследовательский университет)»}\\
+	\textbf{(МГТУ им. Н.Э.~Баумана)}
+\end{minipage}
+
+\noindent\rule{18cm}{3pt}
+\newline\newline
+\noindent ФАКУЛЬТЕТ $\underline{\text{«Информатика и системы управления»}}$ \newline\newline
+\noindent КАФЕДРА $\underline{\text{«Программное обеспечение ЭВМ и информационные технологии»}}$\newline\newline
+\newline
+
+
+\begin{center}
+	\noindent\begin{minipage}{1.0\textwidth}\centering
+	\Large\textbf{ ОТЧЕТ ПО ПРОИЗВОДСТВЕННОЙ ПРАКТИКЕ }\newline\newline\newline
+	\end{minipage}
+\end{center}
+
+\noindent ~Студент $\underline{\text{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Романов Алексей Васильевич~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline
+
+\noindent ~Группа $\underline{\text{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ИУ7-43Б~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline
+
+\noindent ~Тип практики $\underline{\text{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~стационарная~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline
+
+\noindent ~Название предприятия $\underline{\text{~~~~~~~~МГТУ им. Н. Э. Баумана, каф. ИУ7~~~~~~~~~~~~~~~~~~~~~~~~~}}$\newline\newline\newline
+
+
+\noindent\begin{tabular}{lcc}
+	Студент: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~& $\underline{\text{~~~~~~~~~~~~~~~~}}$ & $\underline{\text{~~Романов А. В.~~}}$ \\
+	& \footnotesize подпись, дата  & \footnotesize Фамилия, И.О. \\
+	& &  \\
+	Руководитель практики: & $\underline{\text{~~~~~~~~~~~~~~~~}}$ & $\underline{\text{~~~~Оленев А. А.~~~}}$ \\
+	& \footnotesize подпись, дата & \footnotesize Фамилия, И. О. \\
+\end{tabular}
+
+""\newline\newline
+
+\noindent ~Оценка $\underline{\text{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}$
+
+
+\begin{center}
+	\vfill
+	Москва~---~\the\year
+~г.
+\end{center}
+\clearpage
+
+\tableofcontents 
+\clearpage
+
+\section{Постановка задачи}
+
+\noindent Проектирование, разработка и поддерживание соревновательной системы для оттачивания навыков программирования, созданная для студентов кафедры ИУ7 МГТУ им. Н.Э. Баумана, проходящих курс \textbf{<<Программирование на СИ>>}\newline
+
+\noindent Внедрение данной соревновательной системы для прохождения студентами 1-го курса летней практики по направлению \textbf{<<Углубленный СИ>>}
+
+\section{Введение}
+
+\noindent Изучение программирования в соревновательной форме является одним из наиболее эффективных способов выучить какой-либо ЯП. К сожалению, для студентов кафедры ИУ7, изучающих язык программирования СИ, никаких соревновательных систем предоставлено не было. \newline
+
+\noindent Командой разработчиков \textbf{IU7OG}, под руководством Оленева А. А., было принято решение разработать и внедрить для последующих студентов первых и вторых курсов автоматизированную соревновательную систему. Так же, рассматривалась возможность внедрения этой системы для проведения летней практики студентов 1-го курса кафедры ИУ7. \newline
+
+\noindent Состав команды разработчиков:\newline
+
+\noindent \textbf{Кононенко Сергей} - руководитель разработки.\newline
+\noindent \textbf{Романов Алексей} - технический директор.\newline
+\noindent \textbf{Нитенко Михаил} - разработчик.\newline
+\noindent \textbf{Якуба Дмитрий} - технический писатель.
+
+\section{Аналитическая часть}
+
+\subsection{Обзор существующих решений}
+
+\noindent На нашей кафедре, в рамках курса программирования на СИ, существует всего лишь одна простая соревновательная система - \textbf{CLabsQuest} (https://test.iu7.bmstu.ru:9999).
+
+\subsection{Анализ достоинств и недостатков CLabsQuest}
+
+\noindent Данная платформа имеет большое количество недостатков:\newline
+
+\noindent \textbf{1.} Доступна только для студентов \textbf{ИУ7-23Б} и \textbf{ИУ7-25Б.}\newline
+\noindent \textbf{2.} Простота задач тестовой системы.\newline
+\noindent \textbf{3.} Ручное добавление задач и тестов в систему.\newline
+\noindent \textbf{4.} Простота и ненадежность тестовой системы, которая проверяет решения студентов.\newline
+\noindent \textbf{5.} Необходимость писать код прямо в браузере либо копировать код из среды разработки.\newline
+\noindent \textbf{6.} Несбалансированная рейтинговая система.\newline\newline
+
+\noindent К доистонствам можно отнести:\newline
+
+\noindent \textbf{1.} Большое количество задач.\newline
+\noindent \textbf{2.} Существование системы как таковой, потому что никаких аналогов не существует.
+
+\section{Конструкторская часть}
+
+\subsection{Разработка структуры ПО}
+
+\noindent В качестве платформы, где будет размещена соревновательная система, был выбран кафедральный \textbf{gitlab}. Саму структуру ПО можно разбить на две части: \newline
+
+\noindent \textbf{1.} Механизм, обеспечивающий проведение тестирования и оценки эффективности кода участников. Сюда входит: автоматическая проверка решения задачи на тестовых данных, подсчёт времени решения задачи, подсчёт очков, набранных студентом. \newline
+\noindent \textbf{2.} Механизм, выполняющий взаимодействие пользователя и соревновательной системы. Сюда входит:  загрузка студентами в репозитории кода, проверка возможности скомпилировать этот код, запуск механизма, тестирующего код, обновление рейтинговой системы.
+
+\subsection{Способы тестирования ПО}
+
+\noindent Тестирование в проекте автоматизированное, для этого в рабочем репозитории был настроен \textbf{CI} (Continuous Integration). Такой подход позволяет автоматически тестировать любое обновление, выпущенное в репозиторий. \newline
+
+\noindent Помимо этого, была внедрена практика так называемого \textbf{code review}. Прежде чем выпустить очередное обновление, весь новый код в ручном режиме просматривался всеми участниками проекта. Таким образом, были найдены баги на стадии разработки (не пойманные CI), было улучшено качество программного продукта.
+
+\section{Технологическая часть}
+
+\subsection{Выбор технических средств}
+
+\noindent В качестве языка разработки был выбран ЯП \textbf{Python} из-за своей простоты использования, скорости написания кода и большого количества всевозможных библиотек, которые пригодятся в разработке. \newline
+
+\noindent Как было указано выше, сама сорвновательная система расположена на \textbf{gitlab}. Это решение было обосновано тем, что студенты первого и второго курса проходят лабораторный практикум именно на этой платформе, и эта система уже знакома им. \newline
+
+\noindent Для запуска и тестирования СИ кода из Python была выбрана библиотека \textbf{ctypes}, предоставляющая большой интерфейс подходящий для решения поставленной задачи. \newline
+
+\noindent Для взаимодействия с gitlab, была использована библиотека \textbf{python-gitlab}. 
+
+\section{Заключение}
+
+\noindent Программный продукт был реализован в полной мере. Было выпущено \textbf{шесть} алгоритмических задач. Первый запуск проекта был произведен в рамках группы \textbf{ИУ7-23Б}, где каждый из студентов смог в полной мере опробовать разработанное ПО, при этом изучая курс программирования СИ. \newline
+
+\noindent Помимо этого, нам удалось внедрить соревновательную систему для прохождения студентами 1-го курса летней практики по направлению \textbf{углубленное изучение СИ}. С помощью системы летнюю практику в автоматизированном режиме прошли 16 человек. \newline
+
+\noindent Мы постоянно поддерживаем наш проект выпуская регулярные обновления. Так же, планируется выйти на большую аудиторию, выходяющую за рамки кафедры ИУ7. В следующем семестре запланирован запуск соревновательной системы на весь поток студентов второго курса кафедры ИУ7.
+
+
+\end{document}
