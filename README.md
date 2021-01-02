@@ -1,13 +1,5 @@
-# Лабы по АрхЭВМ, ИУ7. Пятый семестр.
+# Лабы по Архитектуре ЭВМ, ИУ7. 
 
-В этом (2020) году вместо микроконтроллеров мы программировали на NodeJS (спасибо, Попов).
-
-# Отдельное спасибо
-
-Главный **NodeJS** разработчик №1: [@Justarone](https://github.com/justarone)  
-Главный **NodeJS** разработчик №2: [@hackfeed](https://github.com/hackfeed)
-
-![nodejs](https://sun9-68.userapi.com/impf/kwW3v3n_lgiG6bBCwf3_1odO98GwyTyQnzAPuQ/ulldGlOr_ck.jpg?size=0x0&quality=90&proxy=1&sign=97c27d2a8d8484c023015dd02bafec35)
-
-
+* Семестр 4 -- Триггеры, мультисим и зачет.
+* Семестр 5 -- Node.js, [хакатон](https://github.com/IU7OG-Team/hakabonq-ai-security-hackathon) и рейтинговый экзамен.
 
