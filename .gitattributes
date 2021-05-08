@@ -1,2 +1,2 @@
 *.tex linguist-documentation
-*/docs/* linguist-documentation
+*/docs/reports/*/tex/* linguist-documentation
